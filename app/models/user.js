@@ -13,12 +13,12 @@ const userschema = new mongoose.Schema({
         required: true,
         maxlength: 255,
     },
-    adresse : {
-        type: 'String',
-        default: null,
-        required: false,
-        maxlength: 255,
-    },
+    // adresse : {
+    //     type: 'String',
+    //     default: null,
+    //     required: false,
+    //     maxlength: 255,
+    // },
     telephone : {
         type: 'String',
         default: null,

@@ -14,7 +14,7 @@ exports.register = async(req, res) => {
   const errors = validationResult(req);
   if(!errors.isEmpty())
       return res.status(422).json(validation(errors.array()));
-  const { prenom, nom, email, telephone, role, password, new_password } = req.body;
+  const { prenom, nom, email, telephone,role, password, new_password } = req.body;
   try {
       if (!prenom || !nom || !email || !role || ! telephone || !password || !new_password)
           return res.status(422).json(validation({message:"Tous les champs sont requis pour creer un compte "}));
@@ -30,7 +30,6 @@ exports.register = async(req, res) => {
               prenom,
               nom,
               email,
-              adresse,
               telephone,
               role,
               password,
